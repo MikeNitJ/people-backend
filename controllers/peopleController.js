@@ -14,6 +14,7 @@ router.get("/", async (req, res) => {
 
 // CREATE
 router.post("/", async (req, res) => {
+    console.log(req.body);
     try{
         res.json( await People.create(req.body))
     } catch (error){
